@@ -1,15 +1,17 @@
 import { View, Text } from 'react-native'
 
+import { styles } from './styles';
+
 export default function Cabecalho({ name, position, color }: any) {
     return (
-        <View>
-            <View>
-                <Text> { name[0] } </Text>
+        <View style={styles.header}>
+            <View style={[styles.avatar, { backgroundColor: color } ]}>
+                <Text style={styles.avatarText}> {name[0]} </Text>
             </View>
 
             <View>
-                <Text> { name } </Text>
-                <Text> { position } </Text>
+                <Text style={styles.name}> {name} </Text>
+                <Text style={styles.position}> {position} </Text>
             </View>
         </View>
     );
