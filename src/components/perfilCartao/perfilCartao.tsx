@@ -11,7 +11,7 @@ import { styles } from './styles';
 export default function PerfilCartao({ name, position, color, bio }: any) {
     const [curtidas, setCurtidas] = useState(0);
     const [seguir, setSeguir] = useState(false);
-    const [mostrarBio, setmostrarBio] = useState(false);
+    const [mostrarBio, setMostrarBio] = useState(false);
 
     return (
         <Cartao>
@@ -27,10 +27,10 @@ export default function PerfilCartao({ name, position, color, bio }: any) {
                 <Botao
                     text={seguir ? 'Seguindo ✓' : 'Seguir'}
                     active={seguir}
-                    onPress={!seguir} />
+                    onPress={() => setSeguir(!seguir)} />
                 <Botao
                     text={mostrarBio ? 'Ocultar bio' : 'Ver bio'}
-                    onPress={!mostrarBio}
+                    onPress={() => setMostrarBio(!mostrarBio)}
                 />
 
             </View>

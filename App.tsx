@@ -28,6 +28,13 @@ export default function App() {
         color="#008000"
       />
 
+      <PerfilCartao
+        name="Ana Luisa Santos"
+        position="Engenheira de Software e Educadora"
+        bio="404 - The Not Found"
+        color="#8B0000"
+      />
+
     </ScrollView>
   );
 }
